@@ -1,0 +1,53 @@
+
+.btn-suboption{
+    background-color: rgba(230, 230, 230, 0.85);
+    margin-inline: 0.5px;
+    color: rgb(83, 83, 83);
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-radius: 0px;
+}
+
+
+.suboptions-x{
+    background-color: rgba(230, 230, 230, 0.85) !important;
+}
+
+.btn-suboption:focus,
+.btn-suboption:active,
+.btn-suboption:active:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-suboption.active{
+    border-radius: 0px;
+    border-bottom: 2px solid #3463b1;
+}
+
+.input-green-custom{
+    background-color: #c8d681;
+    border: 2px solid #a2ac66;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-align: right;
+}
+
+.input-blue-custom{
+    background-color: #e0ecfa;
+    border: 2px solid #99acdf;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-align: right;
+}
+
+.input-disable-custom{
+    background-color: #fff;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-align: right;
+}
+
+.input-to-right{
+    text-align: right;
+}

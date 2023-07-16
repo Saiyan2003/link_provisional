@@ -1,0 +1,132 @@
+.header-1 {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 10px;
+}
+
+.logo {
+    color: #4351a3;
+    padding-inline: 10px;
+    /*background-color: aqua;*/
+}
+
+.logo {
+    margin: 0;
+}
+
+.options-header {
+    margin-left: auto;
+    margin-right: 5px;
+    display: flex;
+}
+
+.buttons-header {
+    padding: 15px 30px;
+    color: #9b3742;
+    border: none;
+    cursor: pointer;
+    background-color: transparent !important;
+    font-size: 18px;
+    display: flex;
+}
+
+.header-2 {
+    background-color: #3363b1;
+    color: #fff;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.datetime {
+    display: flex;
+    align-items: center;
+}
+
+.date,
+.time {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.welcome {
+    font-size: 20px;
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.welcome .title-welcome {
+    margin-right: 16px;
+    align-items: center;
+}
+
+
+.button-salir {
+    padding: 10px 20px;
+    background-color: #5b9fcf;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.fa-solid {
+    margin-right: 5px;
+}
+
+.buttons-special {
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #9b3742 !important;
+    font-size: 18px;
+    display: flex;
+}
+
+.buttons-special .arrow-left {
+    margin-left: 10px;
+}
+
+.input-container {
+    display: flex;
+    background-color: #3363b1;  
+    color: white !important;
+}
+
+.color-input {
+    width: 250px; /* Ancho más grande */
+    margin-left: 10px;
+    padding: 5px;
+    color: white !important;
+    background-color: #3363b1 !important;
+}
+
+.color-input::placeholder {
+    color: whitesmoke;
+  }
+  
+
+.title-welcome {
+    margin-right: 16px;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    color: white !important;
+}
+
+.title-welcome input {
+    margin-left: 10px;
+    color: white !important;
+    background-color: #3363b1 !important;
+    border: none;
+    font-size: 20px;
+}

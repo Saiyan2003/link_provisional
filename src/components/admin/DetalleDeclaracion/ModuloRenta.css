@@ -1,0 +1,18 @@
+
+.input-disable-custom-2{
+    background-color: rgb(184, 184, 184);
+    cursor: not-allowed;
+    pointer-events: none;
+    text-align: right;
+}
+
+.input-to-right{
+    text-align: right;
+}
+
+
+.input-disable-custom-2-left{
+    background-color: rgb(184, 184, 184);
+    cursor: not-allowed;
+    pointer-events: none;
+}

@@ -1,0 +1,11 @@
+
+.btn-option.active {
+    border-bottom: 2px solid #3463b1;
+}
+
+.btn-option:focus,
+.btn-option:active,
+.btn-option:active:focus {
+    outline: none;
+    box-shadow: none;
+}

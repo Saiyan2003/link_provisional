@@ -1,0 +1,26 @@
+.alert-special-1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.text-alert-special-1 {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.igvMore {
+    display: none;
+}
+
+.igvMore.open {
+    display: block;
+}
+
+.custom-date-input::-webkit-datetime-edit-text,
+.custom-date-input::-webkit-datetime-edit-month-field,
+.custom-date-input::-webkit-datetime-edit-year-field {
+  color: red;
+}
+

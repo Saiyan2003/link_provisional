@@ -1,0 +1,8 @@
+.home-section {
+    position: relative;
+    /*background: rgb(255, 185, 185);*/
+    left: 320px;
+    height: calc(100vh);
+    width: calc(100% - 320px);
+    overflow-y: auto;
+}
