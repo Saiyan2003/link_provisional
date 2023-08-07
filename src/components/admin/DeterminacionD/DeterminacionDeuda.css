@@ -1,28 +1,51 @@
-
-.input-green-custom-edit{
+.input-green-custom-edit {
     background-color: #c8d681 !important;
     border: 2px solid #a2ac66 !important;
     text-align: right;
 }
 
-.text-to-right-edit{
+.text-to-right-edit {
     text-align: right;
 }
 
-.bg-subtotal{
+.bg-subtotal {
     background-color: rgb(240, 240, 240);
 }
 
-.bg-button-pdf{
+.bg-button-pdf {
     background-color: #983945 !important;
     color: #fff;
 }
 
-.bg-button-validar{
+.bg-button-validar {
     background-color: #4d79b6 !important;
     color: #fff;
 }
 
-.input-to-right{
+.input-to-right {
     text-align: right;
+}
+
+#custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+
+.modal-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    padding: 25px 150px 25px 150px;
 }

@@ -10,31 +10,7 @@ import { useEffect } from 'react';
 function App() {
 
   useEffect(() => {
-    localStorage.setItem("TasaPropia", "");
-    localStorage.setItem("Regimen", "");
-    localStorage.setItem("100", "");
-    localStorage.setItem("101", "");
-
-    localStorage.setItem("107", "");
-    localStorage.setItem("108", "");
-
-    localStorage.setItem("301", "");
-    localStorage.setItem("312", "");
-
-    localStorage.setItem("140", "");
-    localStorage.setItem("302", "");
-    localStorage.setItem("304", "");
-    localStorage.setItem("145", "");
-    localStorage.setItem("184", "");
-
-    localStorage.setItem("171", "");
-    localStorage.setItem("179", "");
-    localStorage.setItem("681", "");
-    localStorage.setItem("682", "");
-
-    localStorage.setItem("188","");
-    localStorage.setItem("189", "");
-
+    localStorage.clear();
   })
 
   return (

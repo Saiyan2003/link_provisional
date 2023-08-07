@@ -4,6 +4,8 @@ export default function SubVentas() {
 
   const [value100, setValue100] = useState('');
   const [value101, setValue101] = useState('');
+  const [value106, setValue106] = useState('');
+  const [value112, setValue112] = useState('');
 
   const handleChange1 = (event) => {
     const value = event.target.value;
@@ -14,6 +16,18 @@ export default function SubVentas() {
     setValue101(multiplicacion ? Math.round(multiplicacion) : '');
     localStorage.setItem('101', multiplicacion ? Math.round(multiplicacion) : '');
   };
+
+  const handleChange106 = (event) => {
+    const value = event.target.value;
+    setValue106(value)
+    localStorage.setItem('106', value);
+  }
+
+  const handleChange112 = (event) => {
+    const value = event.target.value;
+    setValue112(value)
+    localStorage.setItem('112', value);
+  }
 
 
 
@@ -26,6 +40,16 @@ export default function SubVentas() {
     const storedValue101 = localStorage.getItem('101');
     if (storedValue101) {
       setValue101(storedValue101);
+    }
+
+    const storedValue106 = localStorage.getItem('106');
+    if (storedValue106) {
+      setValue106(storedValue106);
+    }
+
+    const storedValue112 = localStorage.getItem('112');
+    if (storedValue112) {
+      setValue112(storedValue112);
     }
 
   }, []);
@@ -76,7 +100,7 @@ export default function SubVentas() {
         <p>Exportaciones facturadas en el periodo (bienes y servicios) </p>
         <div class="input-group w-25 ms-5">
           <span class="input-group-text ms-5">106</span>
-          <input type="text" class="form-control input-disable-custom" />
+          <input type="text" class="form-control" value={value106} onChange={handleChange106} />
           <span class="input-group-text">
             <i class="fas fa-question-circle fa-1x" style={{ color: 'black' }}></i>
           </span>
@@ -98,7 +122,7 @@ export default function SubVentas() {
         <p>Otras ventas (inc. ii), num 6.2 Art. 6 del Reglam</p>
         <div class="input-group w-25 ms-5">
           <span class="input-group-text ms-5">112</span>
-          <input type="text" class="form-control input-disable-custom" />
+          <input type="text" class="form-control" value={value112} onChange={handleChange112}/>
           <span class="input-group-text">
             <i class="fas fa-question-circle fa-1x" style={{ color: 'black' }}></i>
           </span>

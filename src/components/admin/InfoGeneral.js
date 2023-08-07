@@ -26,7 +26,28 @@ export default function InfoGeneral() {
     const selectedValue = event.target.value;
     setRegimen(selectedValue);
     localStorage.setItem("Regimen", selectedValue);
+
+    let tipoRegimen = '';
+
+    switch (selectedValue) {
+      case "0.015":
+        tipoRegimen = "3031 - RENTA - REGIMEN GENERAL";
+        break;
+      case "0.0150":
+        tipoRegimen = "3111 - RENTA - REGIMEN ESPECIAL";
+        break;
+      case "0.01":
+        tipoRegimen = "3121 - RENTA - REGIMEN MYPE TRIBUTARIO";
+        break;
+      // Agrega más casos según sea necesario para otros tipos de régimen
+      default:
+        tipoRegimen = '';
+        break;
+    }
+
+    localStorage.setItem("TIPOREGIMEN", tipoRegimen);
   };
+
 
   const handleRadioChangeOpen = (event) => {
     const value = event.target.checked;
@@ -61,20 +82,20 @@ export default function InfoGeneral() {
     const formattedValue = inputValue.replace(/[^0-9/]/g, ''); // Permitir solo números y "/"
     const dateParts = formattedValue.split('/'); // Dividir la cadena en partes (mes y año)
     let storedValue = '';
-  
+
     if (dateParts.length === 2) {
       const [month, year] = dateParts;
       storedValue = `${year}${month}`; // Concatenar el año y el mes en el formato deseado
     }
-  
+
     if (storedValue.length > 6) {
       return; // Evitar que se exceda la longitud de 6 caracteres
     }
-  
+
     setSelectedDate(formattedValue);
     localStorage.setItem('selectedDate', storedValue);
   };
-  
+
 
 
 

@@ -124,7 +124,7 @@ export default function ModuloRenta() {
       </div>
       <div class="border-top ms-5 me-5"></div>
       <div class="group-box ms-5 me-5 mt-4">
-        <p>Coeficiente - Art 85° inc b</p>
+        <p>Porcentaje - Art 85° inc b</p>
         <div class="input-group mb-3">
           <span class="input-group-text">315</span>
           <input type="text" class="form-control input-disable-custom-2" value={localStorage.getItem("Regimen") * 100}/>

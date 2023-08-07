@@ -4,6 +4,7 @@ export default function SubCompras() {
 
   const [value107, setValue107] = useState('');
   const [value108, setValue108] = useState('');
+  const [value120, setValue120] = useState('');
 
   const handleChange1 = (event) => {
 
@@ -17,6 +18,12 @@ export default function SubCompras() {
 
   };
 
+  const handleChange120 = (event) => {
+    const value = event.target.value;
+    setValue120(value)
+    localStorage.setItem('120', value);
+  }
+
   useEffect(() =>{
 
     const storedValue = localStorage.getItem('107');
@@ -27,6 +34,11 @@ export default function SubCompras() {
     const storedValue2 = localStorage.getItem('108');
     if (storedValue2) {
       setValue108(storedValue2);
+    }
+
+    const storedValue120 = localStorage.getItem('120');
+    if (storedValue120) {
+      setValue120(storedValue120);
     }
 
 
@@ -108,7 +120,7 @@ export default function SubCompras() {
         <p>Compras Netas Destinadas a vtas. no grav</p>
         <div class="input-group w-25 ms-5">
           <span class="input-group-text ms-5">120</span>
-          <input type="text" class="form-control input-disable-custom" />
+          <input type="text" class="form-control" value={value120} onChange={handleChange120} />
           <span class="input-group-text">
             <i class="fas fa-question-circle fa-1x" style={{ color: 'black' }}></i>
           </span>
