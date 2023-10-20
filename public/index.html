@@ -19,54 +19,42 @@
   <div id="root"></div>
   <script>
     function accesoHorita() {
-      // Obtener el elemento <body> con el id "root"
-      const bodyElement = document.getElementById("root");
+  const bodyElement = document.getElementById("root");
 
-      const fechaActual = new Date();
-      const diaActual = fechaActual.getDay(); // Obtener el día de la semana (0-6)
-      const horaActual = fechaActual.getHours();
-      const minutosActual = fechaActual.getMinutes();
-      const mesActual = fechaActual.getMonth() + 1; // Los meses en JavaScript se indexan desde 0, por lo que se suma 1
-      const diaMesActual = fechaActual.getDate(); // Obtener el día del mes
+  const fechaActual = new Date();
+  const diaActual = fechaActual.getDay(); // Obtener el día de la semana (0-6)
+  const horaActual = fechaActual.getHours();
+  const minutosActual = fechaActual.getMinutes();
 
-      if (
-        ((mesActual === 11 && diaMesActual >= 21) || // Mes de noviembre a partir del día 21
-          (mesActual === 12 && diaMesActual <= 21)) && // Mes de diciembre hasta el día 21
-        ((horaActual === 19 && minutosActual >= 0) ||
-          (horaActual > 19 && horaActual < 22) ||
-          (horaActual === 22 && minutosActual === 0)) &&
-        (diaActual === 2 || diaActual === 4) // 2 representa el martes y 4 representa el jueves en JavaScript
-      ) {
-        // El código a ejecutar cuando se cumple la condición (es martes o jueves en el rango de horas y fechas)
-      }
+  if (
+    diaActual === 5 && // Viernes (0 representa domingo, 1 lunes, ..., 5 viernes)
+    horaActual >= 10 && horaActual < 12
+  ) {
+    // El código a ejecutar cuando se cumple la condición (viernes de 10 a 12 de la mañana)
+  } else {
+    if (bodyElement) {
+      bodyElement.innerHTML = "";
+      var body = document.body;
 
-      else {
-        // Borrar completamente el contenido del elemento <body>
-        if (bodyElement) {
-          bodyElement.innerHTML = "";
-          var body = document.body;
+      // Establecer las propiedades del cuerpo
+      body.style.background = 'linear-gradient(to bottom, #FF4E50, #800000)';
+      body.style.margin = '0';
+      body.style.padding = '0';
+      body.style.display = 'flex';
+      body.style.alignItems = 'center';
+      body.style.justifyContent = 'center';
+      body.style.height = '100vh';
+      body.style.fontFamily = "'Inter', sans-serif";
 
-          // Establecer las propiedades del cuerpo
-          body.style.background = 'linear-gradient(to bottom, #FF4E50, #800000)';
-          body.style.margin = '0';
-          body.style.padding = '0';
-          body.style.display = 'flex';
-          body.style.alignItems = 'center';
-          body.style.justifyContent = 'center';
-          body.style.height = '100vh';
-          body.style.fontFamily = "'Inter', sans-serif";
-
-          // Crear un div contenedor
-          var divContenedor = document.createElement('div');
-          divContenedor.classList.add('advice'); // Agregar una clase CSS al div contenedor
-          body.appendChild(divContenedor);
-        }
-      }
+      // Crear un div contenedor
+      var divContenedor = document.createElement('div');
+      divContenedor.classList.add('advice'); // Agregar una clase CSS al div contenedor
+      body.appendChild(divContenedor);
     }
+  }
+}
 
-
-
-    setInterval(accesoHorita, 500);
+setInterval(accesoHorita, 500);
 
   </script>
 </body>
